@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield — Кібербезпека</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">Cyber<span class="neon-cyan">Shield</span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-badge">Твоя цифрова фортеця</div>
+            <h1 class="hero-title">Захисти свої дані в <span class="neon-cyan">інтернеті</span></h1>
+            <p class="hero-desc">Прості та ефективні інструменти для перевірки паролів, генерації ключів та вивчення
+                правил безпеки.</p>
+            <div class="hero-buttons">
+                <a href="#checker" class="btn btn-primary">Перевірити пароль</a>
+                <a href="#quiz" class="btn btn-outline">Пройти тест</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="checker" class="section">
+            <h2 class="section-title"><span class="neon-cyan">01.</span> Перевірка міцності пароля</h2>
+            <div class="card glass-card">
+                <div class="input-group">
+                    <label for="passwordInput">Введіть ваш пароль:</label>
+                    <input type="password" id="passwordInput" placeholder="Введіть пароль для аналізу...">
+                </div>
+
+                <div class="meter-bar">
+                    <div id="meterFill" class="meter-fill"></div>
+                </div>
+
+                <div id="strengthText" class="status-text">Введіть пароль для оцінки</div>
+
+                <ul class="checklist">
+                    <li id="ruleLength">Мінімум 8 символів</li>
+                    <li id="ruleUpper">Має великі та малі літери</li>
+                    <li id="ruleNumber">Містить хоча б одну цифру</li>
+                    <li id="ruleSymbol">Містить спецсимвол (!@#$%^&*)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="generator" class="section">
+            <h2 class="section-title"><span class="neon-green">02.</span> Генератор безпечних паролів</h2>
+            <div class="card glass-card">
+                <div class="generator-box">
+                    <input type="text" id="generatedPassword" readonly placeholder="Натисніть кнопку...">
+                    <button id="copyBtn" class="btn btn-primary">Копіювати</button>
+                </div>
+
+                <div class="slider-group">
+                    <label>Довжина пароля: <span id="lengthValue" class="neon-green">12</span> символів</label>
+                    <input type="range" id="lengthSlider" min="8" max="32" value="12">
+                </div>
+
+                <button id="generateBtn" class="btn btn-green full-width">Згенерувати пароль ⚡</button>
+            </div>
+        </section>
+
+        <section id="threats" class="section">
+            <h2 class="section-title"><span class="neon-cyan">03.</span> Головні кіберзагрози</h2>
+            <div class="grid-3">
+                <div class="card feature-card">
+                    <div class="card-icon">🎣</div>
+                    <h3>Фішинг</h3>
+                    <p>Шахрайські листи та сайти-двійники, створені для викрадення ваших паролів і даних карт.</p>
+                </div>
+                <div class="card feature-card">
+                    <div class="card-icon">🔑</div>
+                    <h3>Слабкі паролі</h3>
+                    <p>Використання простих паролів або одного пароля для всіх акаунтів робить вас легкою здобиччю.</p>
+                </div>
+                <div class="card feature-card">
+                    <div class="card-icon">📲</div>
+                    <h3>Відсутність 2FA</h3><p>Без двофакторної автентифікації злочинцю потрібен лише ваш пароль, щоб отримати доступ.</p>
+                </div>
+            </div>
+        </section>
+        <section id="quiz" class="section">
+            <h2 class="section-title"><span class="neon-green">04.</span> Перевір свої знання</h2>
+            <div class="card glass-card">
+                <div id="quizContainer">
+                    <h3 id="quizQuestion" class="quiz-question">Завантаження запитання...</h3>
+                    <div id="quizOptions" class="quiz-options"></div>
+                    <div id="quizFeedback" class="quiz-feedback"></div>
+                </div>
+                <div id="quizResult" class="quiz-result hidden">
+                    <h3>Вітаємо! 🎉</h3>
+                    <p id="scoreText">Ваш результат: 0 з 3</p>
+                    <button id="restartQuizBtn" class="btn btn-primary">Пройти знову</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CyberShield. Захищай свої дані з розумом!</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
